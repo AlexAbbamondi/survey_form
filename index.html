@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form Elements</title>
+  	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="js.js">
+  </head>
+
+<!--body of the form with questions-->
+  <body>
+    <h1>Form Elements</h1>
+    <form name="myForm" id="myForm" method="post" action="javascript:compose();">
+		
+		<label>Band:</label>
+			<input type="text" name="band" required><br>
+		
+     	<label>Song:</label>
+			<input type="text" name="song" required><br>
+		
+		<label>Do you play a muscal instrument?</label>
+			<input type="checkbox" name="yearsPlayed" value="yes" onClick="askYears()">
+		<span id="optionalYears"></span><br>
+		
+		<label>Which musical instrument is your favorite?</label>
+		<br>
+		<span id="forRadio">
+			<input type="radio" name="instruments" value="piano" onClick="givenInstruments()">Piano<br>
+			<input type="radio" name="instruments" value="guitar" onClick="givenInstruments()">Guitar<br>
+			<input type="radio" name="instruments" value="drums" onClick="givenInstruments()">Drums<br>
+			<input type="radio" name="instruments" value="other" onClick="askInstrument()">Other<br>
+		</span>
+		<br>
+		<span id="specifyInstrument"></span>
+		
+		<label>What was the first song or album you purchased in your life?</label>
+		<textarea name="first_song_album" rows="4" cols="50" placeholder="First song or album here" onFocus="myMessage()" onBlur="hideMessage()"></textarea>
+		<span id="showMessage"></span>
+		
+      <input type="submit" name="submit" value="Submit Form" >
+    </form>
+	  
+	  <span id="showCompose"></span>
+	  
+  </body>
+</html>
